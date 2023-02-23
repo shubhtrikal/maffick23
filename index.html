@@ -1066,8 +1066,7 @@
                         </div>
 
                         <div class="col-md-8 offset-md-2 wow fadeInUp">
-                            <form name="contactForm" id="contact_form" method="POST"
-                                action="https://server.mafficknitb.com/register">
+                            <form name="contactForm" id="contact_form" method="POST">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div id="name_error" class="error">Please enter your name.</div>
@@ -1122,6 +1121,7 @@
 
                                         </div>
                                     </div>
+                                    <div id = "errorMain"></div>
                                     <div class="col-md-12 text-center">
                                         <p id="submit">
                                             <input type="submit" id="submit" value="Register Now" class="btn btn-line">
@@ -1377,6 +1377,8 @@
     ================================================== -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
+        const errorClass = document.querySelector('#errorMain');
+        const myForm = document.querySelector('#contact_form')
         const handleSubmit = async(event) =>{
             event.preventDefault();
 
@@ -1387,11 +1389,16 @@
             await axios.post('https://server.mafficknitb.com/register', value)
             .then((res) => {
                 console.log(res);
-                location. reload()
+                errorClass.innerHTML = "Registered Successfully";
+                errorClass.style.color = "green";
+                // location. reload()
+                myForm.reset();
             })
             .catch((err) => {
                 console.log(err);
-                location. reload()
+                errorClass.innerHTML = "User already registered";
+                errorClass.style.color = "red";
+                // location. reload()
             })
 
             console.log({ value });
