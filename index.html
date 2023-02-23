@@ -1549,7 +1549,7 @@
             const myform = document.querySelector('#contact_form');
             const value = Object.fromEntries(data.entries());
 
-            await axios.post('http://localhost:8000/register', value)
+            await axios.post('https://server.mafficknitb.com/register', value)
                 .then((res) => {
                     console.log(res);
                     errorClass.innerHTML = "Registered Successfully";
