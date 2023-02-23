@@ -1196,8 +1196,7 @@
                         </div>
 
                         <div class="col-md-8 offset-md-2 wow fadeInUp">
-                            <form name="contactForm" id="contact_form" method="POST"
-                                action="https://server.mafficknitb.com/register">
+                            <form name="contactForm" id="contact_form" method="POST">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div id="name_error" class="error">Please enter your name.</div>
@@ -1252,6 +1251,7 @@
 
                                         </div>
                                     </div>
+                                    <div id = "errorMain"></div>
                                     <div class="col-md-12 text-center">
                                         <p id="submit">
                                             <input type="submit" id="submit" value="Register Now" class="btn btn-line">
@@ -1508,7 +1508,7 @@
     ================================================== -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
-        const handleSubmit = async (event) => {
+        const handleSubmit = async(event) =>{
             event.preventDefault();
 
             const data = new FormData(event.target);
@@ -1516,14 +1516,14 @@
             const value = Object.fromEntries(data.entries());
 
             await axios.post('https://server.mafficknitb.com/register', value)
-                .then((res) => {
-                    console.log(res);
-                    location.reload()
-                })
-                .catch((err) => {
-                    console.log(err);
-                    location.reload()
-                })
+            .then((res) => {
+                console.log(res);
+                location. reload()
+            })
+            .catch((err) => {
+                console.log(err);
+                location. reload()
+            })
 
             console.log({ value });
         }

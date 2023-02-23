@@ -142,3 +142,10 @@ footer {
   }
 }
 
+#errorMain {
+  text-align: center;
+  width: 100%;
+  font-size:25px;
+  margin: 20px 0;
+  font-weight: bold;
+}
