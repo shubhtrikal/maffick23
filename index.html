@@ -142,7 +142,7 @@
                     <div class="de-video-overlay t50"></div>
 
                     <!-- load your video here -->
-                    <video preload="true" autoplay="autoplay" loop="true" poster="images/video-poster.jpg">
+                    <video preload="true" autoplay="autoplay" muted="true" loop="true" poster="images/video-poster.png">
                         <source src="./images/teaser.mp4" type="video/mp4" />
                     </video>
 
@@ -209,8 +209,11 @@
                                             PANACHE
                                         </div>
                                         <p class="lead">Group Fashion Show</p>
+                                        <p><b>Theme: Tribal/Ethnic/Traditional</b></p>
                                         <div class="small-border"></div>
-                                        <p>Among the most anticipated parts of Maffick '23 is Panache, a group fashion
+                                        <p class="e_desc" id="p_rule">Among the most anticipated parts of Maffick '23 is
+                                            Panache, a
+                                            group fashion
                                             show. Featuring fashion enthusiasts from all over the country, ‘Panache’ is
                                             an acclamation of fashion, fused with creativity and originality. In this
                                             edition, ethnic Indian attires will be given a contemporary spin.
@@ -223,7 +226,9 @@
                                             reflection of their individuality and ingenuity.
 
                                             <br>Catch us for a memorable experience on the 5th of March, 6:30pm onwards!
-
+                                            <br><span style="color: var(--primary-color-1); cursor: pointer;"
+                                                onclick="panacheRules()">Read
+                                                Rules</span>
                                         </p>
 
                                         <!-- <div class="social">
@@ -261,7 +266,9 @@
                                         </div>
                                         <p class="lead">Dance Competition</p>
                                         <div class="small-border"></div>
-                                        <p>Bodyrock, a highly anticipated dance competition, is a part of Maffick'23. It
+                                        <p class="e_desc" id="b_rule">Bodyrock, a highly anticipated dance competition,
+                                            is a part of
+                                            Maffick'23. It
                                             draws in talented dancers who are eager to showcase their skills and compete
                                             for the top prize.
 
@@ -271,8 +278,11 @@
                                             own unique way.
 
                                             Experience this vibrant energy of arts and get ready to be swept away by the
-                                            magic of dance. <br>Register for Bodyrock now!</p>
-
+                                            magic of dance. <br>Register for Bodyrock now!
+                                            <br><span style="color: var(--primary-color-1); cursor: pointer;"
+                                                onclick="bodyrockRules()">Read
+                                                Rules</span>
+                                        </p>
                                         <!--<div class="social">
                                             <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
                                             <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
@@ -307,7 +317,9 @@
                                         </div>
                                         <p class="lead">Singing Competition</p>
                                         <div class="small-border"></div>
-                                        <p>Swarangan; the ultimate singing showdown, is here to give you a chance to
+                                        <p class="e_desc" id="s_rule">Swarangan; the ultimate singing showdown, is here
+                                            to give you
+                                            a chance to
                                             take the mic and use your voice to create magic.
                                             Swarangan is a platform for vocalists of different ages and socioeconomic
                                             levels to compete against one another, initiated by Maffick. It gives you
@@ -319,6 +331,9 @@
 
                                             <br>Join us on the 6th March, 10pm onwards at the civil auditorium, MANIT
                                             campus.
+                                            <br><span style="color: var(--primary-color-1); cursor: pointer;"
+                                                onclick="swaranganRules()">Read
+                                                Rules</span>
                                         </p>
 
                                         <!-- <div class="social">
@@ -1372,11 +1387,13 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-8 col-md-7">
-                            <h3 class="size-2 no-margin">Get a chance to represent the biggest event in Central India. Hurry up and join this elite team and experience the magic of MAFFICK’23!</h3>
+                            <h3 class="size-2 no-margin">Get a chance to represent the biggest event in Central India.
+                                Hurry up and join this elite team and experience the magic of MAFFICK’23!</h3>
                         </div>
 
                         <div class="col-lg-4 col-md-5 text-right">
-                            <a href="https://docs.google.com/forms/d/1BedGimxvFmP9QpVXF55c2rvmDuVbDIk-gOc-HuTl-9U/viewform?edit_requested=true" class="btn-custom text-white scroll-to" target="_blank">Click here</a>
+                            <a href="https://docs.google.com/forms/d/1BedGimxvFmP9QpVXF55c2rvmDuVbDIk-gOc-HuTl-9U/viewform?edit_requested=true"
+                                class="btn-custom text-white scroll-to" target="_blank">Click here</a>
                         </div>
                     </div>
                 </div>
@@ -1486,8 +1503,7 @@
                                             class="fa fa-facebook fa-lg"></i></a>
                                     <a href="https://www.instagram.com/mafficknitb/"><i
                                             class="fa fa-instagram fa-lg"></i></a>
-                                    <a href="https://twitter.com/maffick_nitb"><i
-                                            class="fa fa-twitter fa-lg"></i></a>
+                                    <a href="https://twitter.com/maffick_nitb"><i class="fa fa-twitter fa-lg"></i></a>
                                     <a href="https://www.youtube.com/@mafficknitb"><i
                                             class="fa fa-youtube fa-lg"></i></a>
                                     <a href="https://www.linkedin.com/company/mafficknitb/"><i
@@ -1578,6 +1594,7 @@
         form.addEventListener('submit', handleSubmit);
     </script>
     <script src="js/plugins.js"></script>
+    <script src="js/rules.js"></script>
     <script src="js/designesia.js"></script>
     <script src="js/validation.js"></script>
     <script src="js/countdown-custom.js"></script>
